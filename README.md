@@ -1,6 +1,6 @@
-# Awesome Feeds
+# Awesome GitHub Feeds
 
-## Start daemon which creates an awesome feed
+## Start daemon which creates an awesome GitHub feed
 
     $ bundle exec clockworkd -c clock.rb start --log
 

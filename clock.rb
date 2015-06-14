@@ -6,6 +6,6 @@ path = File.join(__dir__, 'settings.yml')
 
 settings = YAML.load(ERB.new(IO.read(path)).result)
 
-require_relative 'lib/awesome-feeds'
+require_relative 'lib/awesome-github-feed'
 
-AwesomeFeeds.new(settings).start
+AwesomeGithubFeed.new(settings).start

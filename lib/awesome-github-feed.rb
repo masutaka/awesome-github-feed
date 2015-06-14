@@ -3,7 +3,7 @@ require 'logger'
 require 'open-uri'
 require 'rexml/document'
 
-class AwesomeFeeds
+class AwesomeGithubFeed
   def initialize(settings)
     @feed_url = settings['feed_url']
     @exclusion_keyword = settings['exclusion_keyword']
