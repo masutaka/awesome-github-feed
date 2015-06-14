@@ -1,0 +1,10 @@
+feed_url:
+  https://github.com/masutaka.private.atom?token=hogehoge
+exclusion_keyword:
+  jogai
+path_to_output:
+  /path/to/output/masutaka.private.atom
+element_name:
+  entry
+fetch_interval_seconds:
+  <%= 20.minutes %>
