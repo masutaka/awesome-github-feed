@@ -1,3 +1,4 @@
 /.bundle
+/public/*.atom
 /settings.yml
 /vendor/bundle
