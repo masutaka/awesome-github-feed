@@ -1,4 +1,4 @@
-# Awesome GitHub Feed
+# [WIP] Awesome GitHub Feed
 
 ## Start daemon which creates an awesome GitHub feed
 
