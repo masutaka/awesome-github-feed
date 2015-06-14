@@ -1,4 +1,5 @@
 /.bundle
 /public/*.atom
 /settings.yml
+/tmp
 /vendor/bundle
