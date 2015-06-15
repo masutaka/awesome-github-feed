@@ -8,17 +8,20 @@
 
     $ bundle exec ruby app.rb -e production
 
-You can access http://localhost:4567/masutaka.private.atom?token=hogehoge in the case of the following `settings.yml`.
+You can access http://localhost:4567/masutaka.private.atom?token=xxxxx in the case of the following `settings.yml`.
 
 ```yaml
-feed_url:
-  https://github.com/masutaka.private.atom?token=hogehoge
+github:
+  account:
+    masutaka
+  feed_token:
+    xxxxx
 exclusion_keyword:
-  jogai
-path_to_output:
-  /path/to/output/masutaka.private.atom
+  keyword
 element_name:
   entry
 fetch_interval_seconds:
-  <%= 20.minutes %>
+  <%= 3.minutes %>
+output_dir:
+  /path/to/output
 ```

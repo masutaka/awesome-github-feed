@@ -11,7 +11,11 @@ settings = YAML.load(ERB.new(IO.read(path)).result)
 
 require 'sinatra'
 
-feed_url = URI.parse(settings['feed_url'])
+require_relative 'lib/github'
+
+github = AwesomeGithubFeed::Github.new(settings['github'])
+
+feed_url = URI.parse(github.feed_url)
 feed_file = File.basename(feed_url.path)
 url_query = Hash[*feed_url.query.sub('=', ' ').split.map{|e| e.split(':')}.flatten]
 

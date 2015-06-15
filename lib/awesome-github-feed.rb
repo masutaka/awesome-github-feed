@@ -3,13 +3,15 @@ require 'logger'
 require 'open-uri'
 require 'rexml/document'
 
+require_relative 'github'
+
 class AwesomeGithubFeed
   def initialize(settings)
-    @feed_url = settings['feed_url']
+    @github = Github.new(settings['github'])
     @exclusion_keyword = settings['exclusion_keyword']
-    @path_to_output = settings['path_to_output']
     @element_name = settings['element_name']
     @fetch_interval_seconds = settings['fetch_interval_seconds']
+    @output_dir = settings['output_dir']
     @logger = Logger.new(STDOUT)
   end
 
@@ -21,8 +23,8 @@ class AwesomeGithubFeed
   private
 
   def create
-    doc = REXML::Document.new(open(@feed_url))
-    @logger.info("fetch #{@feed_url}")
+    doc = REXML::Document.new(open(@github.feed_url))
+    @logger.info("fetch #{@github.feed_url}")
 
     doc.context[:attribute_quote] = :quote
     root = doc.root
@@ -33,9 +35,11 @@ class AwesomeGithubFeed
       root.delete_element(element)
     end
 
-    File.open(@path_to_output, 'w') do |outfile|
+    path_to_output = File.join(@output_dir, @github.feed_file)
+
+    File.open(path_to_output, 'w') do |outfile|
       doc.write(outfile)
-      @logger.info("create #{@path_to_output}")
+      @logger.info("create #{path_to_output}")
     end
   end
 end
