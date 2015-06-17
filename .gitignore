@@ -1,5 +1,7 @@
 /.bundle
 /public/*.atom
 /settings.yml
-/tmp
+/tmp/app.pid
+/tmp/clockworkd.clock.output
+/tmp/clockworkd.clock.pid
 /vendor/bundle
