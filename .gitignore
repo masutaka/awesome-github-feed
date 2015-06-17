@@ -1,4 +1,5 @@
 /.bundle
+/.envrc
 /public/*.atom
 /settings.yml
 /tmp/app.pid
