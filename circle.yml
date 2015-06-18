@@ -9,7 +9,7 @@ test:
 
 deployment:
   production:
-    branch: circleci
+    branch: master
     commands:
       - |
         ./script/deploy-circleci.sh
