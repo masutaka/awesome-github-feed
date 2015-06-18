@@ -6,3 +6,10 @@ test:
   override:
     - |
       true
+
+deployment:
+  production:
+    branch: circleci
+    commands:
+      - |
+        ./script/deploy-circleci.sh
