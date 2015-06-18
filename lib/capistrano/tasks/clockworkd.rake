@@ -42,4 +42,3 @@ namespace :clockworkd do
     "`cat #{fetch(:clockworkd_pid)}`"
   end
 end
-

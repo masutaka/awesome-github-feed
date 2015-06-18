@@ -43,4 +43,3 @@ namespace :sinatra do
     "`cat #{fetch(:sinatra_pid)}`"
   end
 end
-
