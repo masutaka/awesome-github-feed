@@ -1,6 +1,14 @@
 # [WIP] Awesome GitHub Feed
 
-## Clockworkd
+## for development
+
+### Setup
+
+    $ cp settings.example.yml settings.yml
+
+And modify settings.yml
+
+### Clockworkd
 
 Create an awesome GitHub feed
 
@@ -10,9 +18,9 @@ Create an awesome GitHub feed
     # Stop
     $ kill `cat tmp/clockworkd.clock.pid`
 
-## Sinatra
+### Sinatra
 
-    $ bundle exec ruby app.rb -e production
+    $ bundle exec ruby app.rb
 
 You can access http://localhost:4567/masutaka.private.atom?token=xxxxx in the case of the following `settings.yml`.
 
@@ -27,7 +35,7 @@ exclusion_keyword:
 element_name:
   entry
 fetch_interval_seconds:
-  <%= 3.minutes %>
+  <%= 10.minutes %>
 output_dir:
   /path/to/output
 ```
