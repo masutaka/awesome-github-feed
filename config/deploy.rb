@@ -40,7 +40,8 @@ namespace :deploy do
   desc 'Get settings.yml'
   before :updated, :setting_file do
     on roles(:all) do
-      execute "cd #{release_path} && curl -Ls -o settings.yml #{ENV.fetch('SETTINGS_FILE_PATH')}"
+      # Use `capture` instead of `execute` for not displaying $SETTINGS_FILE_PATH
+      capture "cd #{release_path} && curl -Ls -o settings.yml #{ENV.fetch('SETTINGS_FILE_PATH')}"
     end
   end
 
