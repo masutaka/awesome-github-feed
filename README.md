@@ -4,9 +4,10 @@
 
 ### Setup
 
+    $ bundle install --path vendor/bundle --binstubs vendor/bundle/bin
     $ cp settings.example.yml settings.yml
 
-And modify settings.yml
+Modify settings.yml
 
 ### Clockworkd
 
