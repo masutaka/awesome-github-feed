@@ -1,4 +1,4 @@
-# [WIP] Awesome GitHub Feed
+# [WIP] Awesome GitHub Feed [![circleci badge][circleci-badge]][circleci-link]
 
 ## for development
 
@@ -40,3 +40,6 @@ fetch_interval_seconds:
 output_dir:
   /path/to/output
 ```
+
+[circleci-badge]: https://circleci.com/gh/masutaka/awesome-github-feed/tree/master.svg?style=svg
+[circleci-link]: https://circleci.com/gh/masutaka/awesome-github-feed/tree/master
