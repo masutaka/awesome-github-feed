@@ -8,6 +8,6 @@ exclusion_keyword:
 element_name:
   entry
 fetch_interval_seconds:
-  <%= 3.minutes %>
+  <%= 10.minutes %>
 output_dir:
   /path/to/output
