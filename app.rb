@@ -11,7 +11,7 @@ settings = YAML.load(ERB.new(IO.read(path)).result)
 
 require 'sinatra'
 
-configure :production do
+configure do
   pid_file = File.join('tmp', 'app.pid')
 
   File.open(pid_file, 'w') {|f| f.write Process.pid }
