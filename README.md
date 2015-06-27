@@ -1,4 +1,4 @@
-# [WIP] Awesome GitHub Feed [![circleci badge][circleci-badge]][circleci-link]
+# Awesome GitHub Feed [![circleci badge][circleci-badge]][circleci-link]
 
 ## for development
 
