@@ -12,6 +12,8 @@ settings = YAML.load(ERB.new(IO.read(path)).result)
 require 'sinatra'
 
 configure do
+  set static_cache_control: :no_cache
+
   pid_file = File.join('tmp', 'app.pid')
 
   File.open(pid_file, 'w') {|f| f.write Process.pid }
@@ -32,6 +34,5 @@ url_query = Hash[*feed_url.query.sub('=', ' ').split.map{|e| e.split(':')}.flatt
 get "/#{feed_file}" do
   # URL Query に token が含まれていること前提になっているので、何とかする
   pass unless params[:token] == url_query[:token]
-  cache_control :no_cache
   File.read(feed_file)
 end
