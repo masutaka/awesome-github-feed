@@ -11,4 +11,10 @@ deployment:
     branch: master
     commands:
       - |
-        ./script/deploy-circleci.sh
+        if [ -z "${BUNDLE_UPDATE}" ] ; then
+          ./script/deploy-circleci.sh
+        else
+          gem update bundler --no-ri --no-rdoc
+          gem install circleci-bundle-update-pr
+          circleci-bundle-update-pr CircleCI circleci@example.com
+        fi
