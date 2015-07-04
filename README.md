@@ -1,4 +1,4 @@
-# Awesome GitHub Feed [![circleci badge][circleci-badge]][circleci-link]
+# Awesome GitHub Feed
 
 ## for development
 
@@ -44,6 +44,3 @@ output_dir:
 ## Automatically `$ bundle update`
 
 A pull request regularly creates by a trigger https://dashboard.heroku.com/apps/bu-awesome-github-feed
-
-[circleci-badge]: https://circleci.com/gh/masutaka/awesome-github-feed/tree/master.svg?style=svg
-[circleci-link]: https://circleci.com/gh/masutaka/awesome-github-feed/tree/master
