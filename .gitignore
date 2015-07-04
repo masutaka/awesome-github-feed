@@ -3,6 +3,6 @@
 /public/*.atom
 /settings.yml
 /tmp/app.pid
-/tmp/clockworkd.clock.output
-/tmp/clockworkd.clock.pid
+/tmp/clockworkd.clockwork.pid
+/tmp/clockworkd.clockwork.output
 /vendor/bundle
