@@ -14,7 +14,7 @@ require 'sinatra'
 configure do
   set static_cache_control: :no_cache
 
-  pid_file = File.join('tmp', 'app.pid')
+  pid_file = File.join('tmp', 'pids', 'app.pid')
 
   File.open(pid_file, 'w') {|f| f.write Process.pid }
 
