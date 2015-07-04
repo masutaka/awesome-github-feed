@@ -36,8 +36,6 @@ set :linked_dirs, %w{log public tmp vendor/bundle}
 
 set :bundle_path, -> { shared_path.join('vendor', 'bundle') }
 
-set :clockwork_file, 'clock.rb'
-
 namespace :deploy do
   desc 'Get settings.yml'
   before :updated, :setting_file do
