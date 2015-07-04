@@ -13,10 +13,10 @@ Modify settings.yml
 Create an awesome GitHub feed
 
     # Start
-    $ bundle exec clockworkd -c lib/clockwork.rb start --log
+    $ bundle exec clockworkd -c lib/clockwork.rb --log start
 
     # Stop
-    $ kill `cat tmp/clockworkd.clock.pid`
+    $ bundle exec clockworkd -c lib/clockwork.rb --log stop
 
 ### Sinatra
 
