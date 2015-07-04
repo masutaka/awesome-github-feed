@@ -1,15 +1,11 @@
-# ここから
 require 'active_support/time'
 require 'erb'
+require 'sinatra'
 require 'yaml'
+require_relative 'lib/awesome_github_feed/github'
 
 path = File.join(__dir__, 'settings.yml')
-
 settings = YAML.load(ERB.new(IO.read(path)).result)
-
-# ここまでの重複を何とかする
-
-require 'sinatra'
 
 configure do
   set static_cache_control: :no_cache
@@ -22,8 +18,6 @@ configure do
     File.delete(pid_file)
   end
 end
-
-require_relative 'lib/github'
 
 github = AwesomeGithubFeed::Github.new(settings['github'])
 

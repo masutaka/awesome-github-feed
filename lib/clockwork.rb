@@ -1,11 +1,9 @@
 require 'active_support/time'
 require 'erb'
 require 'yaml'
+require_relative 'awesome_github_feed'
 
 path = File.join(__dir__, '..', 'settings.yml')
-
 settings = YAML.load(ERB.new(IO.read(path)).result)
-
-require_relative 'awesome-github-feed'
 
 AwesomeGithubFeed.new(settings).start

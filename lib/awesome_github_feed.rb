@@ -2,8 +2,7 @@ require 'clockwork'
 require 'logger'
 require 'open-uri'
 require 'rexml/document'
-
-require_relative 'github'
+require_relative 'awesome_github_feed/github'
 
 class AwesomeGithubFeed
   def initialize(settings)
