@@ -16,6 +16,9 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-clockwork (0.0.4)
+      capistrano (~> 3.1)
+      daemons (~> 1.2)
     clockwork (1.2.0)
       activesupport
       tzinfo
@@ -62,10 +65,11 @@ DEPENDENCIES
   activesupport
   capistrano
   capistrano-bundler
+  capistrano-clockwork
   clockwork
   daemons
   pushover
   sinatra
 
 BUNDLED WITH
-   1.10.4
+   1.10.5

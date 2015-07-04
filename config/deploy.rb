@@ -26,7 +26,7 @@ set :log_level, ENV.fetch('LOG_LEVEL', :info)
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{public tmp vendor/bundle}
+set :linked_dirs, %w{log public tmp vendor/bundle}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -50,11 +50,6 @@ namespace :deploy do
     on roles(:app) do
       invoke 'sinatra:stop'
       invoke 'sinatra:start'
-    end
-
-    on roles(:batch) do
-      invoke 'clockworkd:stop'
-      invoke 'clockworkd:start'
     end
   end
 end
