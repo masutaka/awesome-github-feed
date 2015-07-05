@@ -1,5 +1,7 @@
 # Awesome GitHub Feed
 
+Deliver awesome GitHub feed
+
 ## for development
 
 ### Setup
