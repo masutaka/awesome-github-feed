@@ -40,6 +40,10 @@ output_dir:
   /path/to/output
 ```
 
-## Automatically `$ bundle update`
+## Automatic deployment
+
+When any commits are pushed to master, [CircleCI will deploy to masutaka.net](https://circleci.com/gh/masutaka/awesome-github-feed/tree/master).
+
+## Automatic `$ bundle update`
 
 A pull request regularly creates by a trigger https://dashboard.heroku.com/apps/bu-awesome-github-feed
