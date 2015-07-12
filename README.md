@@ -1,4 +1,4 @@
-# Awesome GitHub Feed
+# Awesome GitHub Feed [![circleci badge][circleci-badge]][circleci-link]
 
 Deliver awesome GitHub feed
 
@@ -49,3 +49,6 @@ When any commits are pushed to master, [CircleCI will deploy to masutaka.net](ht
 ## Automatic `$ bundle update`
 
 A pull request regularly creates by a trigger https://dashboard.heroku.com/apps/bu-awesome-github-feed
+
+[circleci-badge]: https://circleci.com/gh/masutaka/awesome-github-feed/tree/master.svg?style=svg
+[circleci-link]: https://circleci.com/gh/masutaka/awesome-github-feed/tree/master
