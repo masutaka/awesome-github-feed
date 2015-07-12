@@ -4,7 +4,10 @@ machine:
 
 test:
   override:
-    - /bin/true
+    - |
+      cp spec/files/masutaka.private.atom contents
+      cp spec/files/settings.yml .
+      bundle exec rspec spec
 
 deployment:
   production:

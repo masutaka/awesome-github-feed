@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xml:lang="en-US" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:github.com,2008:/masutaka.private</id>
+  <link href="https://github.com/masutaka" rel="alternate" type="text/html"/>
+  <link href="https://github.com/masutaka.private.atom?token=VALIDTOKEN" rel="self" type="application/atom+xml"/>
+  <title>Private Feed for masutaka</title>
+  <updated>2015-07-12T06:34:41Z</updated>
+</feed>

@@ -2,7 +2,7 @@ require 'active_support/time'
 require 'erb'
 require 'sinatra'
 require 'yaml'
-require_relative 'lib/awesome_github_feed/github'
+require_relative 'lib/awesome_github_feed'
 
 path = File.join(__dir__, 'settings.yml')
 settings = YAML.load(ERB.new(IO.read(path)).result)
@@ -19,14 +19,11 @@ configure do
   end
 end
 
-github = AwesomeGithubFeed::Github.new(settings['github'])
+awesome_github_feed = AwesomeGithubFeed.new(settings)
+github = awesome_github_feed.github
 
-feed_url = URI.parse(github.feed_url)
-feed_file = File.basename(feed_url.path)
-url_query = Hash[*feed_url.query.sub('=', ' ').split.map{|e| e.split(':')}.flatten]
-
-get "/#{feed_file}" do
-  # URL Query に token が含まれていること前提になっているので、何とかする
-  pass unless params[:token] == url_query[:token]
-  File.read(feed_file)
+get "/#{github.feed_file}" do
+  pass if params[:token].nil?
+  pass unless params[:token] == github.feed_url_query['token']
+  File.read(awesome_github_feed.feed_path)
 end
