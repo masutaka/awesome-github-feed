@@ -37,6 +37,8 @@ set :linked_dirs, %w{contents log tmp vendor/bundle}
 set :bundle_path, -> { shared_path.join('vendor', 'bundle') }
 set :clockwork_file, -> { 'clockwork.rb' }
 
+after 'deploy:updated', 'newrelic:notice_deployment'
+
 namespace :deploy do
   desc 'Get settings.yml'
   before :updated, :setting_file do
