@@ -12,3 +12,9 @@ group :development do
   gem 'capistrano-clockwork', require: false
   gem 'pushover', require: false
 end
+
+group :development, :test do
+  gem 'pry'
+  gem 'rack-test'
+  gem 'rspec'
+end
