@@ -4,6 +4,7 @@ ruby '2.2.2'
 gem 'activesupport'
 gem 'clockwork'
 gem 'daemons'
+gem 'newrelic_rpm'
 gem 'sinatra'
 
 group :development do
