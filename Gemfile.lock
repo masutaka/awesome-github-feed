@@ -1,12 +1,3 @@
-GIT
-  remote: git://github.com/masutaka/capistrano-clockwork.git
-  revision: 5e268d3da2dcf133c7bd314b410e40e655bccb7e
-  branch: add-option-dir
-  specs:
-    capistrano-clockwork (0.0.4)
-      capistrano (~> 3.1)
-      daemons (~> 1.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -25,6 +16,9 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-clockwork (0.0.4)
+      capistrano (~> 3.1)
+      daemons (~> 1.2)
     clockwork (1.2.0)
       activesupport
       tzinfo
@@ -95,7 +89,7 @@ DEPENDENCIES
   activesupport
   capistrano
   capistrano-bundler
-  capistrano-clockwork!
+  capistrano-clockwork
   clockwork
   daemons
   newrelic_rpm
