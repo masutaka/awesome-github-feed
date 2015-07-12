@@ -1,8 +1,8 @@
 /.bundle
 /.envrc
-/public/*.atom
+/contents/*.atom
 /settings.yml
-/tmp/app.pid
-/tmp/clockworkd.clockwork.pid
 /tmp/clockworkd.clockwork.output
+/tmp/clockworkd.clockwork.pid
+/tmp/pids/app.pid
 /vendor/bundle
