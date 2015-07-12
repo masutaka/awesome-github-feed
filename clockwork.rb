@@ -4,6 +4,8 @@ require 'newrelic_rpm'
 require 'yaml'
 require_relative 'lib/awesome_github_feed'
 
+GC::Profiler.enable
+
 path = File.join(__dir__, 'settings.yml')
 settings = YAML.load(ERB.new(IO.read(path)).result)
 
