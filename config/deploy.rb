@@ -31,7 +31,7 @@ set :linked_dirs, %w{contents log tmp vendor/bundle}
 # Default value for default_env is {}
 set :default_env, {
       'NEW_RELIC_ENV' => 'production',
-      'NRCONFIG'      => current_path.join('config', 'newrelic.yml'),
+      'NRCONFIG'      => release_path.join('config', 'newrelic.yml'),
     }
 
 # Default value for keep_releases is 5
