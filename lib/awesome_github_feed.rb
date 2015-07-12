@@ -5,6 +5,8 @@ require 'rexml/document'
 require_relative 'awesome_github_feed/github'
 
 class AwesomeGithubFeed
+  attr_reader :github
+
   def initialize(settings)
     @github = Github.new(settings['github'])
     @exclusion_keyword = settings['exclusion_keyword']
@@ -17,6 +19,10 @@ class AwesomeGithubFeed
   def start
     Clockwork::handler {|job| send(job)}
     Clockwork::every(@fetch_interval_seconds, :create)
+  end
+
+  def feed_path
+    @feed_path ||= File.join(@output_dir, @github.feed_file)
   end
 
   private
@@ -34,11 +40,9 @@ class AwesomeGithubFeed
       root.delete_element(element)
     end
 
-    path_to_output = File.join(@output_dir, @github.feed_file)
-
-    File.open(path_to_output, 'w') do |outfile|
+    File.open(feed_path, 'w') do |outfile|
       doc.write(outfile)
-      @logger.info("create #{path_to_output}")
+      @logger.info("create #{feed_path}")
     end
   end
 end

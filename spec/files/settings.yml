@@ -10,4 +10,4 @@ element_name:
 fetch_interval_seconds:
   <%= 10.minutes %>
 output_dir:
-  /path/to/output
+  contents
