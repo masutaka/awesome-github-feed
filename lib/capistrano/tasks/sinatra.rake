@@ -1,8 +1,8 @@
 namespace :load do
   task :defaults do
-    set :sinatra_log, -> { File.join(shared_path, 'log', 'app.log') }
-    set :sinatra_pid, -> { File.join(shared_path, 'tmp', 'pids', 'app.pid') }
-    set :sinatra_rb, -> { File.join(current_path, 'app.rb') }
+    set :sinatra_log, -> { shared_path.join('log', 'app.log') }
+    set :sinatra_pid, -> { shared_path.join('tmp', 'pids', 'app.pid') }
+    set :sinatra_rb, -> { current_path.join('app.rb') }
   end
 end
 
