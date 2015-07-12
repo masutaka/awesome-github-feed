@@ -29,7 +29,7 @@ set :log_level, ENV.fetch('LOG_LEVEL', :info)
 set :linked_dirs, %w{contents log tmp vendor/bundle}
 
 # Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+set :default_env, { 'NEW_RELIC_ENV' => 'production' }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
