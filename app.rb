@@ -27,6 +27,6 @@ url_query = Hash[*feed_url.query.sub('=', ' ').split.map{|e| e.split(':')}.flatt
 
 get "/#{feed_file}" do
   # URL Query に token が含まれていること前提になっているので、何とかする
-  pass unless params[:token] == url_query[:token]
-  File.read(feed_file)
+  pass unless params[:token] == url_query['token']
+  File.read(File.join('contents', feed_file))
 end

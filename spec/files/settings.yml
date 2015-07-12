@@ -1,0 +1,13 @@
+github:
+  account:
+    masutaka
+  feed_token:
+    VALIDTOKEN
+exclusion_keyword:
+  keyword
+element_name:
+  entry
+fetch_interval_seconds:
+  <%= 10.minutes %>
+output_dir:
+  /path/to/output
