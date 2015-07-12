@@ -18,10 +18,11 @@ Create an awesome GitHub feed
     $ bundle exec clockwork clockwork.rb
 
     # Start daemon
-    $ bundle exec clockworkd -c clockwork.rb --dir=`pwd` --log start
+    $ export NRCONFIG=`pwd`/config/newrelic.yml
+    $ bundle exec clockworkd -c clockwork.rb --log start
 
     # Stop daemon
-    $ bundle exec clockworkd -c clockwork.rb --dir=`pwd` --log stop
+    $ bundle exec clockworkd -c clockwork.rb --log stop
 
 ### Sinatra
 
