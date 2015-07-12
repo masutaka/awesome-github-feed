@@ -1,5 +1,6 @@
 /.bundle
 /.envrc
+/config/newrelic.yml
 /contents/*.atom
 /log/newrelic_agent.log
 /settings.yml
