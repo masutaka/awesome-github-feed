@@ -14,7 +14,7 @@ namespace :sinatra do
         if test("[ -e #{fetch(:sinatra_pid)} ] && kill -0 #{sinatra_pid}")
           info 'sinatra is running...'
         else
-          execute :bundle, 'exec ruby', fetch(:sinatra_rb), '>>', fetch(:sinatra_log), '2>&1 &'
+          execute :bundle, 'exec ruby', fetch(:sinatra_rb), '-e production >>', fetch(:sinatra_log), '2>&1 &'
         end
       end
     end
