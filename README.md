@@ -10,14 +10,17 @@ Deliver awesome GitHub feed
 
 Modify settings.yml
 
-### Clockworkd
+### Clockwork
 
 Create an awesome GitHub feed
 
     # Start
+    $ bundle exec clockwork clockwork.rb
+
+    # Start daemon
     $ bundle exec clockworkd -c clockwork.rb --log start
 
-    # Stop
+    # Stop daemon
     $ bundle exec clockworkd -c clockwork.rb --log stop
 
 ### Sinatra
