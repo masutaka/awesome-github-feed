@@ -7,7 +7,7 @@ require_relative 'lib/awesome_github_feed'
 
 GC::Profiler.enable
 
-path = File.join(__dir__, 'settings.yml')
+path = File.join(__dir__, 'config', 'settings.yml')
 settings = YAML.load(ERB.new(IO.read(path)).result)
 
 configure do

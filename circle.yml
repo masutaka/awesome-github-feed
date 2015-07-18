@@ -6,7 +6,7 @@ test:
   override:
     - |
       cp spec/files/masutaka.private.atom contents
-      cp spec/files/settings.yml .
+      cp spec/files/settings.yml config
       bundle exec rspec spec
 
 deployment:
