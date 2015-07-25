@@ -47,8 +47,8 @@ namespace :deploy do
   before :updated, :setting_file do
     on roles(:all) do
       # Use `capture` instead of `execute` for not displaying environment variables in CircleCI
-      capture "cd #{release_path} && curl -Ls -o config/settings.yml #{ENV.fetch('SETTINGS_FILE_PATH')}"
-      capture "cd #{release_path} && curl -Ls -o config/newrelic.yml #{ENV.fetch('NEWRELIC_FILE_PATH')}"
+      capture "cd #{release_path.join('config')} && curl -Ls -o settings.yml #{ENV.fetch('SETTINGS_FILE_PATH')}"
+      capture "cd #{release_path.join('config')} && curl -Ls -o newrelic.yml #{ENV.fetch('NEWRELIC_FILE_PATH')}"
     end
   end
 
