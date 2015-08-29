@@ -19,6 +19,6 @@ deployment:
           ./script/deploy-circleci.sh
         else
           gem update bundler --no-document
-          gem install circleci-bundle-update-pr
+          gem install circleci-bundle-update-pr --no-document
           circleci-bundle-update-pr CircleCI circleci@example.com
         fi
