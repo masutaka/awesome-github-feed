@@ -14,11 +14,4 @@ deployment:
   production:
     branch: master
     commands:
-      - |
-        if [ -z "${BUNDLE_UPDATE}" ] ; then
-          ./script/deploy-circleci.sh
-        else
-          gem update bundler --no-document
-          gem install circleci-bundle-update-pr --no-document
-          circleci-bundle-update-pr CircleCI circleci@example.com
-        fi
+      - ./script/deploy-circleci.sh
