@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:masutaka/awesome-github-feed.git'
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp unless ENV['CIRCLECI']
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/var/www/vhosts/github.masutaka.net'
+set :deploy_to, '/var/www/github.masutaka.net'
 
 # Default value for :scm is :git
 # set :scm, :git
