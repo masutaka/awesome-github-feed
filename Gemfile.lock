@@ -22,7 +22,7 @@ GEM
     clockwork (1.2.0)
       activesupport
       tzinfo
-    coderay (1.1.0)
+    coderay (1.1.1)
     daemons (1.2.3)
     diff-lcs (1.2.5)
     httparty (0.11.0)
@@ -37,7 +37,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.2)
-    newrelic_rpm (3.14.3.313)
+    newrelic_rpm (3.15.0.314)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -56,7 +56,7 @@ GEM
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.2)
+    rspec-core (3.4.3)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
